@@ -20,3 +20,7 @@ document.write("<br>The dog's name is " + Dog + "."); // Prints the variable 'Do
 // An expression example with simple arithmetic
 let x = 5 + 3;  // Expression that adds 5 and 3
 document.write("<br>The result of 5 + 3 is: " + x); // Displays the result of the expression
+
+function myFunction() {
+    document.getElementById("demo").innerHTML = "A function is triggered when the button is clicked. The function outputs some text in a p element with id='demo'.";
+}
