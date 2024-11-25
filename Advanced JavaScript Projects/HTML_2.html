@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="CSS/CSS_1.css">
+</head>
+
+<body>
+
+    <h3>Contact Me!</h3>
+
+    <div class="container">
+        <form name="myForm" action="javascript:void(0);" onsubmit="return validateForm()" method="post">
+            <!-- First Name section -->
+            <label for="fname">First Name</label>
+            <input type="text" name="fname" placeholder="Your name.." required>
+
+            <!-- Last Name section -->
+            <label for="lname">Last Name</label>
+            <input type="text" name="lname" placeholder="Your last name.." required>
+
+            <!-- Email section -->
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="Your email.." required>
+
+            <!-- Country section -->
+            <label for="country">Country</label>
+            <select name="country" required>
+                <option value="">Select a country</option>
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+            </select>
+
+            <!-- Subject section -->
+            <label for="subject">Subject</label>
+            <textarea name="subject" placeholder="Your message here.." style="height:200px"
+                required></textarea>
+
+            <!--submit button-->
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+
+</html>
