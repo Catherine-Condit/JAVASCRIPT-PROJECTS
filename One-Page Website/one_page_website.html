@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="description"
+    content="Learn about Sentinel Dome at Yosemite National Park! As someone who has hiked all the trails at the park, feel free to contact me with any questions!">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>Sentinel Dome</title>
+    <link rel="stylesheet" href="CSS/one_page_website.css"> <!-- Link to the external stylesheet -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Sentinel Dome Hike - Yosemite National Park</h1>
+    </header>
+    <p class="center-text">&starf; California USA &starf;</p>
+    <hr>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#photos">Photos</a>
+        <a href="#hiking-tips">Hiking Tips</a>
+        <a href="#packing-list">Packing List</a>
+        <a href="#video">Video</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <img src="https://lh5.googleusercontent.com/p/AF1QipMyDfC-JEZjhJ1I3ENfc34sL6ZWk4y3iJKj0lwf=w1080-h624-n-k-no"
+        alt="Sentinel Dome Mid-Day" width="500" height="355">
+    <p>Welcome to my blog! I'm so happy you're here. The purpose of this site is to provide you with all the necessary
+        details, tips, and tricks you need to hike Sentinel Dome! Yosemite National Park is by far my favorite park
+        ever, and I have been there over 30 times!</p>
+    <h2 id="photos">Here are some of my favorite photos I have taken over the years along the trail!</h2>
+    <!-- Images used to open the lightbox -->
+    <div class="row">
+        <div class="column">
+            <img src="images/plant1-small.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="images/plant2-small.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="images/plant3-small.png" onclick="openModal();currentSlide(3)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="images/plant4-small.png" onclick="openModal();currentSlide(4)" class="hover-shadow">
+        </div>
+    </div>
+
+    <!-- The Modal/Lightbox -->
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+            <div class="mySlides">
+                <div class="numbertext">1 / 4</div>
+                <img src="images/plant1.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 4</div>
+                <img src="images/plant2.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 4</div>
+                <img src="images/plant3.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 4</div>
+                <img src="images/plant4.png" style="width:100%">
+            </div>
+
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Caption text -->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+            <!-- Thumbnail image controls -->
+            <div class="thumbnail-container">
+                <div>
+                    <img class="demo" src="images/plant1-small.png" onclick="currentSlide(1)"
+                        alt="Close-up shot of a pink wildflower at Sentinel Dome">
+                </div>
+
+                <div>
+                    <img class="demo" src="images/plant2-small.png" onclick="currentSlide(2)"
+                        alt="Close-up shot of a yellow wildflower at Sentinel Dome">
+                </div>
+
+                <div>
+                    <img class="demo" src="images/plant3-small.png" onclick="currentSlide(3)"
+                        alt="Close-up shot of a blue wildflower at Sentinel Dome">
+                </div>
+
+                <div>
+                    <img class="demo" src="images/plant4-small.png" onclick="currentSlide(4)"
+                        alt="Close-up shot of a green wildflower at Sentinel Dome">
+                </div>
+            </div>
+        </div>
+    </div>
+    <main>
+        <h2 id="hiking-tips">Hiking Tips</h2>
+        <p>If you're planning to tackle the Sentinel Dome hike, you're in for a treat! This relatively short trail, just
+            under a mile one way, offers breathtaking panoramic views of Yosemite National Park, including iconic
+            landmarks like Half Dome and El Capitan.</p>
+        <p>To make the most of your hike, start early in the morning to avoid the crowds and catch the stunning sunrise
+            over the valley. Wear sturdy shoes, as the rocky terrain can be tricky, and bring plenty of water to stay
+            hydrated.</p>
+        <p>Don't forget your camera—this hike is a perfect opportunity to capture the beauty of nature. Lastly, take
+            your time on the ascent; the views only get better as you climb, so savor the journey as much as the
+            destination!</p>
+    </main>
+    <!--LIST-->
+    <section id="packing-list">
+        <h2>Packing List</h2>
+        <ul>
+            <li>Sturdy hiking shoes</li>
+            <li>Water bottle (at least 2 liters)</li>
+            <li>Snacks (like trail mix or energy bars)</li>
+            <li>Lightweight backpack</li>
+            <li>Camera or smartphone for photos</li>
+            <li>Sunscreen</li>
+            <li>Hat and sunglasses</li>
+            <li>First aid kit</li>
+            <li>Map or GPS device</li>
+        </ul>
+    </section>
+    <!--VIDEO-->
+    <div id="video" style="text-align: center;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/0E6HLJduzso?si=B_ruINvggRYTZlB-"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <section id="contact">
+        <div>
+            <h3>Got some questions? Or just want to chat? Feel free to reach out below!</h3>
+            <div>
+                <form>
+                    <input type="text" placeholder="First Name"><br>
+                    <input type="text" placeholder="Last Name"><br>
+                    <input type="email" placeholder="Email"><br>
+                    <textarea placeholder="Type message here..."></textarea><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </section>
+    <!--FOOTER-->
+    <footer>
+        <p>&copy; Janie Shmoe Hiking Lifestyle</p>
+    </footer>
+    <script src="JS/one_page_website.js"></script>
+</body>
+
+</html>

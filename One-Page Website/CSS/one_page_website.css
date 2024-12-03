@@ -1,0 +1,249 @@
+/*TEXT FONT AND SIZE*/
+body {
+    background-color: burlywood;
+    font-family: 'Roboto', sans-serif;
+    /*font from fonts.google.com*/
+    font-size: 16px;
+    font-weight: 400;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+}
+
+p {
+    color: black;
+}
+
+img {
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+}
+
+.demo {
+    opacity: 0.6;
+}
+
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.center-text {
+    text-align: center;
+}
+
+/*FORM*/
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 300px;
+    /* Sets desired width */
+    margin: 10px 0;
+    /* Sets margin between inputs */
+    border: 2px solid #ccc;
+    /* Sets border color and style */
+    border-radius: 5px;
+    /* Sets border radius */
+    padding: 8px;
+    font-family: 'Roboto', sans-serif;
+    /*font from fonts.google.com*/
+    box-sizing: border-box;
+}
+
+/* Row Layout using Flexbox */
+.row {
+    display: flex;
+    justify-content: space-between;
+    /* Distribute items evenly with space between them */
+    gap: 16px;
+    /* Adds space between columns */
+    flex-wrap: wrap;
+    /* Allows wrapping for smaller screens */
+}
+
+/* Columns with thumbnails before the modal is opened */
+.column {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    flex: 1 1 22%;
+    /*Ensures four items per row */
+    max-width: 25%;
+    /* Keeps each column width consistent */
+    box-sizing: border-box;
+    /* Ensure padding and border are included in width */
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* tagets and ensures thumbnails inside the modal are displayed in a row */
+.modal-content .thumbnail-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0;
+    /* removes space between thumbnails */
+    margin-bottom: 20px;
+    padding: 0;
+    background-color: black;
+    overflow: hidden;
+    flex: 1 1 100%;
+    max-width: 100%;
+}
+
+
+.mySlides img,
+.thumbnail-container img {
+    width: 100%;
+    height: auto;
+    /* Ensure aspect ratio is preserved */
+}
+
+
+@media (max-width: 768px) {
+    .thumbnail-container {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .column {
+        flex: 1 1 48%;
+        max-width: 48%;
+    }
+}
+
+@media (max-width: 480px) {
+    .thumbnail-container {
+        flex: 1;
+    }
+
+    .column {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+
+
+/* The Close Button */
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Caption text */
+.caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+}
+
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+img.hover-shadow {
+    transition: 0.3s;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
